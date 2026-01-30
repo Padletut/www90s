@@ -15,6 +15,8 @@
     .counter-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:6px; }
     .counter-embed { display:inline-block; line-height:1; vertical-align:middle; }
     .counter-embed img { display:block; }
+    .counter-inline { display:inline-block; vertical-align:middle; line-height:1; }
+    .counter-inline img { display:inline-block; vertical-align:middle; filter:blur(0.6px) drop-shadow(0 0 3px #0f0); }
     .speedbox { margin-top:12px; background:#020; border:1px solid #0f0; padding:8px; display:inline-block; }
     .speed-num { font-size:22px; font-weight:bold; color:#ff0; }
     .speed-sub { font-size:12px; color:#0ff; }
@@ -39,13 +41,12 @@
       <p>Click “Connect”. Your 56k modem will dial, screech, crackle, and <span class="blink">maybe</span> connect.</p>
       <button id="connect" class="button">Connect</button>
       <div class="counter-row">
-        <span class="counter">Visitor #
+        <span class="counter">Visitor #</span>
         <span class="counter-embed">
           <div id="sfc9pabgue2554zb9gqlct7xc1qhuwt7mb6"></div>
         </span>
         <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=9pabgue2554zb9gqlct7xc1qhuwt7mb6&down=async" async></script>
         <noscript><a href="https://www.freecounterstat.com" title="hit counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=9pabgue2554zb9gqlct7xc1qhuwt7mb6" border="0" title="hit counter" alt="hit counter"></a></noscript>
-      </span>
       </div>
 
       <div class="speedbox" id="fakeSpeedBox" style="display:none;">
@@ -70,7 +71,7 @@
     </div>
 
     <div class="gradient-bar"></div>
-    <marquee scrollamount="3">You are visitor #<span id="sfc9pabgue2554zb9gqlct7xc1qhuwt7mb6"></span> — Best viewed in Netscape 3.0 at 800×600</marquee>
+    <marquee scrollamount="3">You are visitor #<span class="counter-inline"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=9pabgue2554zb9gqlct7xc1qhuwt7mb6" border="0" title="hit counter" alt="hit counter"></span> — Best viewed in Netscape 3.0 at 800×600</marquee>
   </div>
 
   <script>
