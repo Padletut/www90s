@@ -1,215 +1,371 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <title>My 90s Home Page — True Dial-Up</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body { background:#003; color:#0f0; font-family:"Comic Sans MS","Courier New",monospace; }
-    .crt { text-shadow:0 0 4px #0f0, 0 0 12px #0f0; }
-    .container { max-width:760px; margin:24px auto; border:3px ridge #0c0; padding:16px; background:#000; }
-    .gradient-bar { height:8px; background:linear-gradient(90deg,#0f0,#00c,#f0f,#0f0); margin:8px 0; }
-    .button { background:#090; color:#fff; border:3px outset #3f3; padding:10px 16px; font-weight:bold; cursor:pointer; box-shadow:inset 0 0 8px #0f0; text-transform:uppercase; }
-    .button:active { border-style:inset; }
-    .counter { font-family:"Courier New",monospace; background:#010; padding:4px 8px; border:1px dashed #0f0; display:inline-block; }
-    .counter-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:6px; }
-    .counter-embed { display:inline-block; line-height:1; vertical-align:middle; }
-    .counter-embed img { display:block; }
-    .counter-inline { display:inline-block; vertical-align:middle; line-height:1; }
-    .counter-inline img { display:inline-block; vertical-align:middle; filter:blur(0.6px) drop-shadow(0 0 3px #0f0); }
-    .speedbox { margin-top:12px; background:#020; border:1px solid #0f0; padding:8px; display:inline-block; }
-    .speed-num { font-size:22px; font-weight:bold; color:#ff0; }
-    .speed-sub { font-size:12px; color:#0ff; }
-    .meter { width:320px; height:12px; background:#002; border:1px solid #0f0; margin-top:8px; position:relative; }
-    .meter-fill { height:100%; background:linear-gradient(90deg,#0f0,#ff0); width:0%; transition:width 140ms linear; }
-    .status { margin-top:8px; color:#0f0; min-height:1.2em; }
-    .content { display:none; }
-    marquee { color:#ff0; font-weight:bold; }
-    table { width:100%; border:2px groove #0f0; background:#010; color:#0f0; }
-    td { border:1px dotted #0f0; padding:6px; }
-    .blink { animation:blink 1s steps(1,end) infinite; } @keyframes blink{50%{opacity:0}}
-    a { color:#0ff; }
-  </style>
-</head>
-<body class="crt">
-  <div class="container">
-    <marquee scrollamount="6" behavior="alternate">WELCOME TO MY COOL 90s HOMEPAGE ✨</marquee>
-    <div class="gradient-bar"></div>
+  <head>
+    <meta charset="utf-8" />
+    <title>My 90s Home Page — True Dial-Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        background: #003;
+        color: #0f0;
+        font-family: "Comic Sans MS", "Courier New", monospace;
+      }
+      .crt {
+        text-shadow: 0 0 4px #0f0, 0 0 12px #0f0;
+      }
+      .container {
+        max-width: 760px;
+        margin: 24px auto;
+        border: 3px ridge #0c0;
+        padding: 16px;
+        background: #000;
+      }
+      .gradient-bar {
+        height: 8px;
+        background: linear-gradient(90deg, #0f0, #00c, #f0f, #0f0);
+        margin: 8px 0;
+      }
+      .button {
+        background: #090;
+        color: #fff;
+        border: 3px outset #3f3;
+        padding: 10px 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: inset 0 0 8px #0f0;
+        text-transform: uppercase;
+      }
+      .button:active {
+        border-style: inset;
+      }
+      .counter {
+        font-family: "Courier New", monospace;
+        background: #010;
+        padding: 4px 8px;
+        border: 1px dashed #0f0;
+        display: inline-block;
+      }
+      .speedbox {
+        margin-top: 12px;
+        background: #020;
+        border: 1px solid #0f0;
+        padding: 8px;
+        display: inline-block;
+      }
+      .speed-num {
+        font-size: 22px;
+        font-weight: bold;
+        color: #ff0;
+      }
+      .speed-sub {
+        font-size: 12px;
+        color: #0ff;
+      }
+      .meter {
+        width: 320px;
+        height: 12px;
+        background: #002;
+        border: 1px solid #0f0;
+        margin-top: 8px;
+        position: relative;
+      }
+      .meter-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #0f0, #ff0);
+        width: 0%;
+        transition: width 140ms linear;
+      }
+      .status {
+        margin-top: 8px;
+        color: #0f0;
+        min-height: 1.2em;
+      }
+      .content {
+        display: none;
+      }
+      marquee {
+        color: #ff0;
+        font-weight: bold;
+      }
+      table {
+        width: 100%;
+        border: 2px groove #0f0;
+        background: #010;
+        color: #0f0;
+      }
+      td {
+        border: 1px dotted #0f0;
+        padding: 6px;
+      }
+      .blink {
+        animation: blink 1s steps(1, end) infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      a {
+        color: #0ff;
+      }
+    </style>
+  </head>
+  <body class="crt">
+    <div class="container">
+      <marquee scrollamount="6" behavior="alternate"
+        >WELCOME TO MY COOL 90s HOMEPAGE ✨</marquee
+      >
+      <div class="gradient-bar"></div>
 
-    <div id="pre" aria-live="polite">
-      <h2>📞 Connect to the Internet</h2>
-      <p>Click “Connect”. Your 56k modem will dial, screech, crackle, and <span class="blink">maybe</span> connect.</p>
-      <button id="connect" class="button">Connect</button>
-      <div class="counter-row">
-        <span class="counter">Visitor #</span>
-        <span class="counter-embed">
-          <div id="sfc9pabgue2554zb9gqlct7xc1qhuwt7mb6"></div>
-        </span>
-        <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=9pabgue2554zb9gqlct7xc1qhuwt7mb6&down=async" async></script>
-        <noscript><a href="https://www.freecounterstat.com" title="hit counter"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=9pabgue2554zb9gqlct7xc1qhuwt7mb6" border="0" title="hit counter" alt="hit counter"></a></noscript>
+      <div id="pre" aria-live="polite">
+        <h2>📞 Connect to the Internet</h2>
+        <p>
+          Click “Connect”. Your 56k modem will dial, screech, crackle, and
+          <span class="blink">maybe</span> connect.
+        </p>
+        <button id="connect" class="button">Connect</button>
+        <p style="margin-top: 6px">
+          <span class="counter">Visitor # <span id="vis">000000</span></span>
+        </p>
+
+        <div class="speedbox" id="fakeSpeedBox" style="display: none">
+          <div>
+            Line: <span class="speed-num" id="speedValue">0.0 kbps</span>
+          </div>
+          <div class="speed-sub" id="speedSub">Negotiating…</div>
+          <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+        </div>
+
+        <p class="status" id="status">Status: Idle</p>
       </div>
 
-      <div class="speedbox" id="fakeSpeedBox" style="display:none;">
-        <div>Line: <span class="speed-num" id="speedValue">0.0 kbps</span></div>
-        <div class="speed-sub" id="speedSub">Negotiating…</div>
-        <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+      <div id="content" class="content" role="main">
+        <h1>🌐 You Are Now Online!</h1>
+        <p>
+          Welcome, netizen. Enjoy my frames-free, table-based,
+          blink-tag-adjacent website!
+        </p>
+        <table>
+          <tr>
+            <td>Latest News</td>
+            <td>Got my own homepage!! Sign my guestbook.</td>
+          </tr>
+          <tr>
+            <td>Cool Links</td>
+            <td>
+              <a href="https://arngren.no" target="_blank" rel="noreferrer"
+                >arngren.no</a
+              >
+              (extreme 90s energy)
+            </td>
+          </tr>
+          <tr>
+            <td>MIDI of the Week</td>
+            <td style="padding-left: 8px;">
+              <span style="font-size: 30px">♪</span> Under varruction
+              <img src="under-construction-digging-action-loop.gif" alt="Under Construction" style="vertical-align: middle; height: 50px; margin-left: 8px;" />
+            </td>
+          </tr>
+        </table>
+        <p style="margin-top: 10px">
+          If it suddenly disconnects… someone picked up the phone 😅
+        </p>
       </div>
 
-      <p class="status" id="status">Status: Idle</p>
-      <p><small>(Put <code>modem56k.mp3</code> next to this HTML.)</small></p>
+      <div class="gradient-bar"></div>
+      <center style="margin: 12px 0;">
+        <img src="under-construction-digging-action-loop.gif" alt="Under Construction" style="height: 64px; margin: 0 8px;" />
+        <img src="under-construction-road-sign-animation.gif" alt="Under Construction" style="height: 64px; margin: 0 8px;" />
+      </center>
+      <marquee scrollamount="3"
+        >You are visitor #<span id="vis2">000000</span> — Best viewed in
+        Netscape 3.0 at 800×600</marquee
+      >
     </div>
 
-    <div id="content" class="content" role="main">
-      <h1>🌐 You Are Now Online!</h1>
-      <p>Welcome, netizen. Enjoy my frames-free, table-based, blink-tag-adjacent website!</p>
-      <table>
-        <tr><td>Latest News</td><td>Got my own homepage!! Sign my guestbook.</td></tr>
-        <tr><td>Cool Links</td><td><a href="https://arngren.no" target="_blank" rel="noreferrer">arngren.no</a> (extreme 90s energy)</td></tr>
-        <tr><td>MIDI of the Week</td><td>♪ Under Construction</td></tr>
-      </table>
-      <p style="margin-top:10px;">If it suddenly disconnects… someone picked up the phone 😅</p>
-    </div>
+    <script>
+      // === Config ===
+      var DIAL_MS = 23000; // dial time (ms)
+      var SPEED_UPDATE_MS = 150; // UI update cadence
+      var DROP_CHANCE = 0.22; // chance to get disconnected after connect
+      var REDIAL_DELAY = [1500, 3500]; // ms range before redial after drop
 
-    <div class="gradient-bar"></div>
-    <marquee scrollamount="3">You are visitor #<span class="counter-inline"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=9pabgue2554zb9gqlct7xc1qhuwt7mb6" border="0" title="hit counter" alt="hit counter"></span> — Best viewed in Netscape 3.0 at 800×600</marquee>
-  </div>
+      var SPEEDS = [2.4, 9.6, 14.4, 28.8, 33.6, 56.0]; // kbps classics
 
-  <script>
-    // === Config ===
-    const DIAL_MS = 23000;           // dial time (ms)
-    const SPEED_UPDATE_MS = 150;    // UI update cadence
-    const DROP_CHANCE = 0.22;       // chance to get disconnected after connect
-    const REDIAL_DELAY = [1500, 3500]; // ms range before redial after drop
+      var VIS_KEY = "retro_visitor_count_v1";
 
-    const SPEEDS = [2.4, 9.6, 14.4, 28.8, 33.6, 56.0]; // kbps classics
-
-
-    // === UI refs ===
-    const btn = document.getElementById('connect');
-    const statusEl = document.getElementById('status');
-    const pre = document.getElementById('pre');
-    const content = document.getElementById('content');
-    const speedBox = document.getElementById('fakeSpeedBox');
-    const speedValueEl = document.getElementById('speedValue');
-    const speedSubEl = document.getElementById('speedSub');
-    const meterFill = document.getElementById('meterFill');
-
-    function playModem() {
-	const test = document.createElement("audio");
-	let src = "./ModemSound1.mp3"; // default
-
-	if (test.canPlayType("audio/ogg; codecs=vorbis").replace("no", "")) {
-	  src = "./ModemSound1.ogg";
-	} else if (test.canPlayType("audio/mpeg").replace("no", "")) {
-	  src = "./ModemSound1.mp3";
-	}
-
-	const a = new Audio(src);
-	a.loop = false;
-	return a;
-	}
-
-
-    function randInt(min,max){ return Math.floor(Math.random()*(max-min+1))+min; }
-    function randMs([a,b]){ return randInt(a,b); }
-
-    function simulateSpeed(durationMs) {
-      const start = Date.now();
-      const end = start + durationMs;
-      const target = SPEEDS[Math.floor(Math.random()*SPEEDS.length)]; // kbps
-      let last = 0;
-      return {
-        tick(){
-          const t = Math.min(1, (Date.now()-start)/(end-start));
-          // ramp + jitter (line noise!)
-          const ease = Math.pow(t,0.65);
-          let val = ease * target + (Math.random()-0.5) * (target*0.18) * (1-ease);
-          // smooth + clamp
-          val = Math.max(0, (last*0.6 + val*0.4));
-          last = val;
-          const pct = Math.round(ease*100);
-          return { kbps: Math.max(0, val), percent: pct, target };
-        },
-        final(){ return target; }
-      };
-    }
-
-    async function negotiateOnce() {
-      statusEl.textContent = 'Status: Dialing…';
-      speedBox.style.display = 'inline-block';
-      const sim = simulateSpeed(DIAL_MS);
-      const audio = playModem();
-
-      try { await audio.play(); } catch(_) {}
-
-      let ticks = 0;
-      const intv = setInterval(() => {
-        ticks++;
-        const s = sim.tick();
-        speedValueEl.textContent = s.kbps.toFixed(1) + ' kbps';
-        speedSubEl.textContent = `${s.percent}% — line noise: ${Math.abs((Math.random()-0.5)*12).toFixed(1)} dB`;
-        meterFill.style.width = Math.min(100, s.percent) + '%';
-      }, SPEED_UPDATE_MS);
-
-      await new Promise(r => setTimeout(r, DIAL_MS));
-      clearInterval(intv);
-      try { audio.pause(); audio.currentTime = 0; } catch(_) {}
-
-      const final = sim.final();
-      speedValueEl.textContent = final.toFixed(1) + ' kbps';
-      speedSubEl.textContent = 'Connection established';
-      meterFill.style.width = '100%';
-
-      statusEl.textContent = 'Status: Connected!';
-      return final;
-    }
-
-    async function maybeDrop() {
-      if (Math.random() < DROP_CHANCE) {
-        statusEl.textContent = '📴 Disconnected — Your mother is on the phone!';
-        // show a fun random “call” duration
-        const ringMs = randMs([1200, 4000]);
-        await new Promise(r => setTimeout(r, ringMs));
-        statusEl.textContent = '☎️ Line free — Redialing…';
-        await new Promise(r => setTimeout(r, randMs(REDIAL_DELAY)));
-        return true; // dropped
+      // === Visitor counter ===
+      function pad6(n) {
+        return String(n).padStart(6, "0");
       }
-      return false; // stayed connected
-    }
+      function getCount() {
+        return parseInt(localStorage.getItem(VIS_KEY) || "41", 10);
+      }
+      function bumpCount() {
+        var n = getCount() + 1;
+        localStorage.setItem(VIS_KEY, String(n));
+        return n;
+      }
+      function renderVisitors(n) {
+        document.getElementById("vis").textContent = pad6(n);
+        document.getElementById("vis2").textContent = pad6(n);
+      }
+      renderVisitors(getCount());
 
-    async function connectFlow() {
-      btn.disabled = true;
+      // === UI refs ===
+      var btn = document.getElementById("connect");
+      var statusEl = document.getElementById("status");
+      var pre = document.getElementById("pre");
+      var content = document.getElementById("content");
+      var speedBox = document.getElementById("fakeSpeedBox");
+      var speedValueEl = document.getElementById("speedValue");
+      var speedSubEl = document.getElementById("speedSub");
+      var meterFill = document.getElementById("meterFill");
 
-      // First negotiation
-      await negotiateOnce();
-      pre.style.display = 'none';
-      content.style.display = 'block';
+      function playModem() {
+        var test = document.createElement("audio");
+        var src = "./ModemSound1.mp3"; // default
 
-      // Randomly simulate a few disconnect/reconnect cycles (max 2)
-      let cycles = 0;
-      while (cycles < 2) {
-        const dropped = await maybeDrop();
-        if (!dropped) break;
-        cycles++;
-        content.style.display = 'none';
-        pre.style.display = 'block';
-        await negotiateOnce(); // redial
-        pre.style.display = 'none';
-        content.style.display = 'block';
+        if (test.canPlayType("audio/ogg; codecs=vorbis").replace("no", "")) {
+          src = "./ModemSound1.ogg";
+        } else if (test.canPlayType("audio/mpeg").replace("no", "")) {
+          src = "./ModemSound1.mp3";
+        }
+
+        var a = new Audio(src);
+        a.loop = false;
+        return a;
       }
 
-      statusEl.textContent = cycles > 0 ? 'Status: Connected (after redial)' : 'Status: Connected (stable)';
-      btn.disabled = false;
-      btn.textContent = 'Reconnect';
-    }
+      function playAmigaTune() {
+        var amiga = new Audio("./Amiga_ba.mp3");
+        amiga.loop = true;
+        amiga.play().catch(function (e) {
+          console.error("Kunne ikke spille Amiga tune:", e);
+        });
+      }
 
-    btn.addEventListener('click', () => {
-      connectFlow().catch(err => {
-        console.error(err);
-        statusEl.textContent = 'Status: Error during connect';
+      function randInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      function randMs([a, b]) {
+        return randInt(a, b);
+      }
+
+      function simulateSpeed(durationMs) {
+        var start = Date.now();
+        var end = start + durationMs;
+        var target = SPEEDS[Math.floor(Math.random() * SPEEDS.length)]; // kbps
+        var last = 0;
+        return {
+          tick() {
+            var t = Math.min(1, (Date.now() - start) / (end - start));
+            // ramp + jitter (line noise!)
+            var ease = Math.pow(t, 0.65);
+            var val =
+              ease * target +
+              (Math.random() - 0.5) * (target * 0.18) * (1 - ease);
+            // smooth + clamp
+            val = Math.max(0, last * 0.6 + val * 0.4);
+            last = val;
+            var pct = Math.round(ease * 100);
+            return { kbps: Math.max(0, val), percent: pct, target };
+          },
+          final() {
+            return target;
+          },
+        };
+      }
+
+      async function negotiateOnce() {
+        statusEl.textContent = "Status: Dialing…";
+        speedBox.style.display = "inline-block";
+        var sim = simulateSpeed(DIAL_MS);
+        var audio = playModem();
+
+        try {
+          await audio.play();
+        } catch (_) {}
+
+        var ticks = 0;
+        var intv = setInterval(() => {
+          ticks++;
+          var s = sim.tick();
+          speedValueEl.textContent = s.kbps.toFixed(1) + " kbps";
+          speedSubEl.textContent = `${s.percent}% — line noise: ${Math.abs(
+            (Math.random() - 0.5) * 12
+          ).toFixed(1)} dB`;
+          meterFill.style.width = Math.min(100, s.percent) + "%";
+        }, SPEED_UPDATE_MS);
+
+        await new Promise((r) => setTimeout(r, DIAL_MS));
+        clearInterval(intv);
+        try {
+          audio.pause();
+          audio.currentTime = 0;
+        } catch (_) {}
+
+        var final = sim.final();
+        speedValueEl.textContent = final.toFixed(1) + " kbps";
+        speedSubEl.textContent = "Connection established";
+        meterFill.style.width = "100%";
+
+        statusEl.textContent = "Status: Connected!";
+        return final;
+      }
+
+      async function maybeDrop() {
+        if (Math.random() < DROP_CHANCE) {
+          statusEl.textContent =
+            "📴 Disconnected — Your mother is on the phone!";
+          // show a fun random “call” duration
+          var ringMs = randMs([1200, 4000]);
+          await new Promise((r) => setTimeout(r, ringMs));
+          statusEl.textContent = "☎️ Line free — Redialing…";
+          await new Promise((r) => setTimeout(r, randMs(REDIAL_DELAY)));
+          return true; // dropped
+        }
+        return false; // stayed connected
+      }
+
+      async function connectFlow() {
+        btn.disabled = true;
+        renderVisitors(bumpCount());
+
+        // First negotiation
+        await negotiateOnce();
+        pre.style.display = "none";
+        content.style.display = "block";
+        playAmigaTune();
+
+        // Randomly simulate a few disconnect/reconnect cycles (max 2)
+        var cycles = 0;
+        while (cycles < 2) {
+          var dropped = await maybeDrop();
+          if (!dropped) break;
+          cycles++;
+          content.style.display = "none";
+          pre.style.display = "block";
+          await negotiateOnce(); // redial
+          pre.style.display = "none";
+          content.style.display = "block";
+        }
+
+        statusEl.textContent =
+          cycles > 0
+            ? "Status: Connected (after redial)"
+            : "Status: Connected (stable)";
         btn.disabled = false;
+        btn.textContent = "Reconnect";
+      }
+
+      btn.addEventListener("click", () => {
+        connectFlow().catch((err) => {
+          console.error(err);
+          statusEl.textContent = "Status: Error during connect";
+          btn.disabled = false;
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
